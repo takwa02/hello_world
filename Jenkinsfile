@@ -1,14 +1,14 @@
 node {
         stage('Poll') {
-                checkout scm
+            checkout scm
         }
         stage('Build') {
-                mvn install
+            mvn install
         }
-        stage('Test') { 
-                mvn test
+        stage('Test') {
+            mvn test
         }
         stage('Deploy') {
-                mvn deploy
+            mvn deploy
         }
 }
