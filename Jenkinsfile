@@ -3,15 +3,12 @@ node {
             checkout scm
         }
         stage('Build') {
-           withMaven(maven:'maven'){
-                   mvn install}
+            mvn install
         }
-        stage('Test') {
-            withMaven(maven:'maven'){ 
-                    mvn test}
+        stage('Test') { 
+            mvn test
         }
         stage('Deploy') {
-            withMaven(maven:'maven'){
-                    mvn deploy}
+            mvn deploy
         }
 }
